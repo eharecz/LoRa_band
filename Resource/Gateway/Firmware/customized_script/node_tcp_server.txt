@@ -1,0 +1,46 @@
+// Code by Will Lovett
+//Reference link: https://www.yld.io/blog/building-a-tcp-service-using-node-js/
+
+
+
+// Create a server to listen for TCP connection
+var net = require('net');
+var server = net.createServer();
+
+// On connection callback
+server.on('connection', handleConnection);
+
+// Listen on port "TCP CLIENT" "Server Port" 9000
+server.listen(9000, function() {
+    console.log('server listening to %j', server.address());
+});
+
+function handleConnection(conn) {
+    
+    var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
+    
+    console.log('new client connection from %s', remoteAddress);
+    
+    conn.on('data', onConnData);
+    conn.once('close', onConnClose);
+    conn.on('error', onConnError);
+    
+    function onConnData(d) {
+        console.log('connection data from %s: %j', remoteAddress, d);
+
+        // Convert your message into a readable format
+        // In this instance, we sent bytes and converted to plain text
+        const b = new Buffer(d).toString('ascii');
+        console.log(b.toString());
+
+        conn.write(d);
+    }
+    
+    function onConnClose() {
+        console.log('connection from %s closed', remoteAddress);
+    }
+    
+    function onConnError(err) {
+        console.log('Connection %s error: %s', remoteAddress, err.message);
+    }
+}

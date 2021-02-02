@@ -1,0 +1,80 @@
+Package: dragino_gw
+Version: 1.0.0-1
+Depends: libc, libftdi1, libftdi, libttn-gateway-connector
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 93766
+Filename: dragino_gw_1.0.0-1_mips_24kc.ipk
+Size: 93345
+SHA256sum: 6acc210e146aa1eb38eef4473833c8a4caef7575938eecda4dc7b96db415b443
+Description:  Dragino-gw is a gateway based on 
+ a Semtech LoRa multi-channel RF receiver (a.k.a. concentrator).
+
+Package: dragino_lorawan_server
+Version: 1.0.2-1
+Depends: libc, libsqlite3, libpthread
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 35261
+Filename: dragino_lorawan_server_1.0.2-1_mips_24kc.ipk
+Size: 35905
+SHA256sum: 1563ed3ba1512a52cd4e95b8e71ee417e0591b4d1981cda579bac211491e3e97
+Description:  LoRaWan simple server
+ For Dragino LG01N/OLG01N/LG02/OLG02/LG308/LPS8
+
+Package: haserl-ui
+Version: 1.1.1-2
+Depends: libc, uhttpd-mod-lua
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 1262901
+Filename: haserl-ui_1.1.1-2_mips_24kc.ipk
+Size: 1263863
+SHA256sum: 442a8024240a9b53cb6a672ee791ddb850c9dc6cf0497d4acf31680de08e05cb
+Description:  dragino loragateway web panel
+
+Package: lg02_pkt_fwd
+Version: 1.2.1-1
+Depends: libc, libuci, libpthread, librt
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 58175
+Filename: lg02_pkt_fwd_1.2.1-1_mips_24kc.ipk
+Size: 57336
+SHA256sum: e65952e1b9669c5cb71d3756e9bc34a9898106ad4ab35bc41bc931de21df7f89
+Description:  LoRa dual channels packet forwarder
+ For Dragino LG01/LG02
+
+Package: libttn-gateway-connector
+Version: 1.0.0-1
+Depends: libc, libprotobuf-c
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 32067
+Filename: libttn-gateway-connector_1.0.0-1_mips_24kc.ipk
+Size: 32674
+SHA256sum: 2a0e7dd88f16f508b62baacd14d155a9e5e3daeff5ca069cc10819cff42b605e
+Description:  Dragino lora-gateway package
+
+Package: lora-gateway
+Version: 1.2.7-3
+Depends: libc, libuci, libftdi1, libsqlite3, libmpsse
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 410081
+Filename: lora-gateway_1.2.7-3_mips_24kc.ipk
+Size: 407591
+SHA256sum: 7a88eb3c5f3f058a24477cff1a3219768d0ef80cc72e8b0ee941118b97639d8c
+Description:  lora-gateway is a library to build a gateway based on 
+ a Semtech LoRa multi-channel RF receiver (a.k.a. concentrator).
+
+Package: luci-app-loragateway
+Version: 1.1-1
+Depends: libc, luci, luci-lib-json, uhttpd-mod-lua
+Section: luci
+Architecture: mips_24kc
+Installed-Size: 25169
+Filename: luci-app-loragateway_1.1-1_mips_24kc.ipk
+Size: 25809
+SHA256sum: f73afe9593ba7beabab5de4193c12e27e6a5fce71ab10cd0cc7ca7bb99208e30
+Description:  dragino loragateway web panel

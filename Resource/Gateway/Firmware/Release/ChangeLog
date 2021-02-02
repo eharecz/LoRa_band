@@ -1,0 +1,268 @@
+WiFi AP Password: dragino+dragino
+WAN Interface HTTP port: 8000
+WAN Interface SSH port: 2222
+
+lgw--build-v5.4.1610176959-20210109-1524
+[x]Fix ABP Decode issue 
+[x]Add LDS01_LWL01 Decoder
+
+lgw--build-v5.4.1609858793-20210105-2301
+[x]Add more parameter for downlink stream for LG308, LPS8 / DLOS8
+[x]Add auto provisioning feature
+[x]Open LIG16 ABP web
+[x]fix system-package.has , /etc/dropbear/id_rsa.pub broken link
+[x]Fix manually downlink issue for IN865
+[x]Add LIG16 / LoRa Radio  and  LoRaWAN Service display
+[x]LIG16 Fall Back IP update
+[x]Add CP2102 support
+[x]Improve IoT_Keep_Alive script to use for case no internet connection or none-LoRaWAN service. 
+
+
+
+lgw--build-v5.4.1607519907-20201209-2120
+  --ABP Decode add TCP support
+
+lgw--build-v5.4.1605405047-20201115-0952
+  --ABP Decode add thingspeak demo
+  --Fix memory bug for None-LoRaWAN mode, this bug will cause device hung
+
+
+
+lgw--build-v5.4.1603422765-20201023-1130
+  --Apart the Network and System setting menu in web
+  --Add mydevice IoT in a box server address. 
+  --Add LBT support, need use external USB to LoRa module. 
+  --Fix customized band bug. 
+  --Fix Fport filter bug
+  --Set TTN-EU as default LoRaWAN server
+  --remove LG02 Detect Error info
+  --Temperory disable realtime log in UI, feature cause CPU high
+
+lgw--build-v5.4.1601912950-20201005-2351
+  --Fix Loriot boot issue.
+
+lgw--build-v5.4.1601176792-20200927-1122 (Test Firmware)
+  --Add AS923-2/AS923-3 Frequency Band
+  --Add LDDS75 Decoder
+
+lgw--build-v5.4.1600788314-20200922-2327(Test Firmware)
+  -- Fix LG02 Relay mode issue. 
+
+lgw--build-v5.4.1600415295-20200918-1550(Test Firmware)
+  -- Fix LHT65 Decoder issue
+
+lgw--build-v5.4.1599841069-20200912-0019
+  --Fix Loriot process not running after reboot
+  --Add ntfs & FAT filesystem support (for USB flash )
+
+lgw--build-v5.4.1599149041-20200904-0005
+  --Update dragino package source link
+  --Add CN470 Subband 
+  --Fix ABP web page display issue. 
+
+
+lgw--build-v5.4.1598286158-20200825-0025
+  --Rename firmware form LG02-LG08 to  lgw
+  --Remove Luci packets
+  --LG01/LG02 Pkt_Fwd to use new UCI structure
+  --Fix LG02 pkt_fwd hung bug
+  --DLOS8 GPS position extend to 6 digits. 
+  --Better view for LoRaWAN page
+  --Remove HTTP for LG308/LPS8/DLOS8
+  --Change Server address for TTN AU915 / AS923
+  --Enable Manual Config GPS (fake latitude, longitude and altitude) 
+  --System Overview page now shows if there is Cellular module
+  --Add Kernal Patch in the build environment to build
+  --Add Wifi for stable boot
+
+LG02_LG08--build-v5.4.1594972541-20200717-1557
+鈥� Add easier OEM logo support
+鈥� WIFi Country Code use DE as default 
+鈥� Completely RSSH feature
+鈥� Enable Debug INFO for LG01-N in low debug level.
+鈥� Update Package Update Link 
+
+
+LG02_LG08--build-v5.4.1593407804-20200629-1318
+鈥� New Page for easier to get and save log file.
+鈥� ABP Decode, Can handle keys with space now. 
+鈥� Payload Decoder support for ABP Decode.
+鈥� Add LHT65 v1.7 firmware version Decoder  
+鈥� Add ASCII String Decode for ABP End Device
+
+LG02_LG08--build-v5.4.1590459021-20200526-1012
+鈥� Release of new UI
+鈥� Add LORIOT support
+鈥� US915 /AU915 STD Frequency display bug. 
+鈥� For filter feature on LoRaWAN gateway: remove the devaddr & fport judge for Join Request
+鈥� Add back keep settings for upgrade. (PASS)
+鈥� Add option to use Cellular as back up internet connection. or the main connection.
+
+LG02_LG08--build-v5.3.1585192026-20200326-1109
+鈥� Add MQTT no filter. 
+鈥� Add ABP Decode. 
+鈥� Add GPS Support for DLOS8
+鈥� Add hardware support for DLOS8
+
+
+LG02_LG08--build-v5.3.1584002217-20200312-1639
+鈥� Modify toggle button feature: pressing 5s and release will reset the gateway to AP mode with default SSID 
+and password and give fall back up in LAN port. 
+鈥� Fix for Packet Reject problem
+鈥� Polish LG308/LPS8 tx power profile.
+鈥� Add Package maintain page. 
+
+
+LG02_LG08--build-v5.3.1581838658-20200216-1539
+鈥� Add LoRaWAN filtering base on DevAddr (for LG308/LPS8/DLOS8)
+鈥� Add hostname as Default Client ID in MQTT settings. 
+
+
+
+LG02_LG08--build-v5.3.1580717788-20200203-1618
+鈥� Fix LG01/LG02 RSSI value issue. 
+鈥� Improve OEM model structure
+鈥� Fallback IP support for model DLOS8
+鈥� *Add script to monitor the lorawan connection , make it more robust. 
+鈥� *Add auto switch between WAN/WiFi/3G connection, 3G connection is now as a back up connection. 
+
+
+LG02_LG08--build-v5.3.1578320582-20200106-2224 [Test Firmware]
+鈥� Add reset control for pkt_fwd. 
+鈥� Add LoRaWAn connection image. 
+鈥� Add Fport filtering (For LPS8/LG308)
+
+
+LG02_LG08--build-v5.3.1577332189-20191226-1151:
+鈥� Improve board detect
+鈥� Show LoRaWAn connection status in cat /var/iot/status 
+鈥� new pkt_fwd modules for LG01 and LG02 with Timestamp and RSSI data
+鈥� Change of LG01-N/LG02 MQTT Features
+	- Add data macros DATA, META and JSON.
+	- Updated Logging for mosquitto pub, sub commands to show which case was executed.
+	- Add input validation for web UI field settings
+	- WiFi set to WPA2 with password "dragino+dragino"
+	- Updated wifi status display.
+
+
+LG02_LG08--build-v5.3.1576467023-20191216-1132
+* Add more new Web UI Beta pages
+* Add Alibaba clound MQTT server
+* Add RU864 frequency band 
+
+LG02_LG08--build-v5.3.1575128261-20191130-2339
+* Improve Uplink connection
+
+LG02_LG08--build-v5.3.1583308432-20200304-1555 [Release]
+鈥� Modify toggle button feature: pressing 5s and release will reset the gateway to AP mode with default SSID and password and give fall back up in LAN port. 
+鈥� Add ABP Decode. 
+鈥� Polish LG308/LPS8 tx power profile.
+鈥� Add Package maintain page. 
+
+
+LG02_LG08--build-v5.3.1574523484-20191123-2339 [Release]
+* Fix downlink connection bug for LG308/LPS8. 
+* Add more new web UI beta page. 
+
+
+
+LG02_LG08--build-v5.3.1574087981-20191118-2241
+* bug fix for GUI. 
+* remove keep setting check box. 
+
+
+LG02_LG08--build-v5.3.1572799318-20191104-0043
+1. This firmware implements a new User Interface for the MQTT connection functions.
+Selecting MQTT from the Service menu will take you to the new UI.
+To return to the main menu, select "LuCI Interface" from the MQTT Configuration page.
+
+2. Do *not* try to Save Settings when flashing this firmware onto a device that is running 
+a previous version of the firmware. The settings are not compatible.
+If you do this by mistake, reflash the device and make sure that "Save Settings" is *disabled*.
+
+3. Refer to the User Guides for your particular device download page.
+There is also a Guide for the new UI features of this firmware available at:
+
+	http://www.dragino.com/downloads/index.php?dir=LoRa_Gateway/LG01N/Firmware/Application_Note/
+	choose the one: MQTT_WebUserInterface-vx.x.pdf
+
+
+	
+	
+LG02_LG08--build-v5.3.1572062709-20191026-1206
+鈥� Disable input from WAN interface for security. Effect interface: WAN and WiFi
+鈥� Change HTTP and SSH port not to use default port to improve security. 
+	-- HTTP port in WAN is now: 8000. 
+	-- SSH port in WAN is 2222 now. 
+If user use WAN port or WiFi port for internet access. And want to connect to the device, use the new port. 
+鈥� Fix Open DNS security issue. 
+鈥� Disable MQTT and TCP for LG308/LPS8 in WEB UI. They are not yet work in LG308 / LPS8
+鈥� Fix packet fwd connection bug for lG308/LPS8. (Potential bug for power shortage)
+鈥� Support Tencent thethingsnetwork lorawan server. 
+
+
+
+LG02_LG08--build-v5.2.1569218466-20190923-1402
+鈥� Fix RSSI issue. 
+鈥� Fix fall back ip doesn鈥檛 work on first boot for LPS8
+鈥� Fix WiFi AP can鈥檛 assign IP to client on LPS8. 
+鈥� Add MQTT downlink
+鈥� LoRaWAN time stamp fix.
+
+
+
+
+LG02_LG08--build-v5.2.1565019571-20190805-2341
+* Add sub band dropdown list for AU915 and US915 frequency bands
+* Add Azure IoT MQTT support for LG01N-LG02
+* Modify Web to support LPS8
+
+LG02_LG08--build-v5.2.1560931576-20190619-1607
+* Add HTTP LoRa Downstream setting. 
+
+LG02_LG08--build-v5.1.1549961114-20190212-1646
+* MQTT is able to set null Password now
+* Add MQTT QoS drop down list. 
+
+LG02_LG08--build-v5.1.1548820215-20190130-1151
+* Add customzied script support (LG01N-LG02)
+* Add downlink support for MQTT/TCP_IP/Customized mode (LG01N-LG02)
+
+LG02_LG08--build-v5.1.1545908833-20181227-1908
+鈥� Enable WiFi AP by default
+鈥� lg02_single_tx_rx support Radiohead library now, it can transmit packet in Radiohead format and Get packets in this format. 
+鈥� Add set power feature for lg02_single_tx_rx
+鈥� Add set SYNC word feature for lg02_single_tx_rx
+鈥� lg02_single_tx_rx -p message option change to use -m
+鈥� Fix loop bug for relay mode in LG02
+鈥� Fix Server Type mode disable mode bug. Now , user can use disable mode. But if want to switch to other mode, user need to reboot the device to make it work. 
+鈥� Disable reset button feature. This feature may cause device reset to factory default in early batch device. 
+鈥� Add refresh action (refresh url after 120 seconds) after reboot or reset to factory default, avoid user see the endless waiting page. 
+鈥� Add set power in the web page for LG02 and LG308
+鈥� Device can store the received data in files for specify format. 
+鈥� Add MQTT Publish support
+
+
+LG02_LG08--build-v5.1.1545026772-20181217-1407
+* Fix upload disconnect problem. 
+* Fix problem that the LG02 will dead in packet forward mode after some days.
+* Fix bug to modify the LoRaWAN address
+* Fix custom frequency parse problem for LG308. 
+* Now board detect will only run once after boot. Avoid mis-detect while using the SPI
+
+LG02_LG08--build-v5.1.1542210480-20181114-2349
+* Improve LoRa IQ inverter for OTAA join
+
+LG02_LG08--build-v5.1.1541419802-20181105-2011
+* Add TCP_IP Client mode support
+
+LG02_LG08--build-v5.0.1539919461-20181019-1126
+* Support Radiohead library
+
+LG02_LG08--build-v5.0.1537950515-20180926-1630
+*Fix Index page, now open 10.130.1.1 will go to setting page. 
+*Fix OEM page bug. 
+*Improve  lg02_pkt_fwd and lg02_single_pkt_fwd
+
+dragino-LG02_LG08--v5.0.1-squashfs-sysupgrade.bin:
+*Fix bugs in lg02_pkt_fwd Utility

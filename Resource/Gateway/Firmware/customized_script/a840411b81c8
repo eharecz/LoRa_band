@@ -1,0 +1,35 @@
+{
+/* 	Auto provisioning file, JSON format 
+	Sugggest to put this file in the https server and set the directory to unshow files. 
+*/
+	"provision_key": "2388c7a387ed934cf97a15a31a4aae547164d603709eee30f582cfe4d83e2d68",  // This key must match the 32 bytes key in device, command: hexdump -v -e '1/1 "%.2x"' -s $((0x100)) -n 32 /dev/mtd6
+	"config_ver" : 69,    // Device will only update when find a higher version, must be integer and without quote ""
+
+
+	//########################################################
+	//## Below configure is optional, remove // to use them.##
+	//########################################################
+	
+	//"provision_server": "eth1_net",        // Default Value: local_net  , your WAN Port network prefix .254, for example your eth1 IP is 192.168.1.69. eth1_net = "192.168.1.254"
+										     // Device will run the provisiong to use new URL if the URL is update. 
+
+	//"gateway_conf": "gateway_conf.factory",      // downlink the gateway_conf file from PROVISION_SERVER/$gateway_conf, original: /etc/config/gateway, for web-ui: LoRa --> LoRa, LoRaWAN --> LoRaWAN(expect gateway ID), LoRaWAN --> LORIOT. gateway_id and email will be ignored
+	//"gateway_id": "keep",       // Keep current setting or set a new gateway ID.   
+	//"email" : "keep",           // Keep current setting or set a new email. 
+	//"ABP_KEY": "abp_keys.factory",     // Point to ABP Decoder File, path: /etc/lora/devskey, web-ui: LoRa --> ABP
+	
+	//"network_conf": "network_conf.factory",	  // downlink the network_conf file from PROVISION_SERVER/$network_conf, original: /etc/config/network, for web-ui: Network --> Network, Network --> Cellular. 
+	//"wireless_conf": "wireless_conf.factory", // downlink the wireless_conf file from PROVISION_SERVER/$wireless_conf, original: /etc/config/wireless, for web-ui: Network --> Wireless
+	//"host_status" : 0,   // 1: Keep current WiFi-SSID and WAN HostName settings; 0: overwrite by network_conf/wireless_conf file.
+
+	
+	//"mqtt_conf" : "mqtt_conf.factory", 		// downlink the mqtt_conf file from PROVISION_SERVER/$mqtt_conf, original: /etc/config/mqtt, for web-ui: MQTT --> MQTT.
+	//"mqtt_channel" : "mqtt_channel.factory"  // Point to MQTT Channel File. 	original: /etc/iot/channels, for web-ui: MQTT --> Channels
+	
+	//"reboot" : 1,   // 1: reboot device, 0 or other value: do nothing
+	
+	//"root_password" : "DRAGINO123",    // Set system password for root, password must be longer than 6 bytes . root user has http and ssh access. 
+	//"admin_password" : "DRAGINO1234",    // Set system password: for admin, password must be longer than 6 bytes, admin user has http access
+	
+	//"script" : "example_script",   // downlink the script and execute.
+}
