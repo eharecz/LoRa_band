@@ -36,7 +36,9 @@ void setup()
     ttgo->tft->setCursor(0, 0);
 
     // Initialize sensor
-    if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) { //Use default I2C port, 400kHz speed
+    // Wire2.begin(25, 26);
+    Wire2.setPins(25, 26);
+    if (!particleSensor.begin(Wire2, I2C_SPEED_FAST)) { //Use default I2C port, 400kHz speed
         ttgo->tft->setCursor(0, 0);
         ttgo->tft->setTextColor(TFT_RED, TFT_BLACK);
         ttgo->tft->println("Sensor was not found.");
@@ -55,7 +57,7 @@ void loop()
     particleSensor.check(); //Check the sensor, read up to 3 samples
     while (particleSensor.available()) { //do we have new data?
         long irValue  = particleSensor.getFIFOIR();
-
+        Serial.println(irValue);
         if (irValue < 50000) {
             return;
         }

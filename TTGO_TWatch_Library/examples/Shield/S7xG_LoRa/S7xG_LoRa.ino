@@ -1,4 +1,5 @@
 #include "config.h"
+#include<SPI.h>
 
 //ttgo主功能类、tft屏幕驱动、s7xg lora及gps相关、btnTicker按钮调度定时器
 TTGOClass *ttgo;
@@ -159,6 +160,7 @@ void lora_receiver()
     //Get data directly from the serial port
     String str = s7xg->loraGetPingPongMessage();
     if (str != "") {
+        Serial.println(str);
         add_message(str.c_str());
     }
 }
@@ -273,7 +275,7 @@ void setup(void)
 void loop(void)
 {
     //根据状态不同进行相应处理
-    switch (state) {
+    switch (2) {
     case 1:
         lora_sender();
         break;

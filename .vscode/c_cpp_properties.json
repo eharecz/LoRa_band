@@ -3,10 +3,13 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:\\Users\\czlhx\\Documents\\Arduino\\libraries\\**",
+                "C:\\Users\\Administrator\\Documents\\Arduino\\libraries\\**",
                 "D:\\Install\\Arduino\\libraries\\**",
-                "C:\\Users\\czlhx\\Documents\\Arduino\\hardware\\espressif\\esp32\\**",
-                "C:\\Users\\czlhx\\Documents\\Arduino\\hardware\\tools\\**"
+                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\espressif\\esp32\\**",
+                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\tools\\**",
+                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\espressif\\esp32\\**",
+                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\tools\\**",
+                "C:\\Users\\Administrator\\Documents\\Arduino\\libraries\\**"
             ],
             "forcedInclude": [],
             "defines": [

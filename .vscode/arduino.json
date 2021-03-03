@@ -1,4 +1,6 @@
 {
     "board": "espressif:esp32:twatch",
-    "configuration": "Revision=TWATCH_BASE,PSRAM=enabled,PartitionScheme=default,UploadSpeed=2000000,DebugLevel=none"
+    "configuration": "Revision=TWATCH_BASE,PSRAM=enabled,PartitionScheme=default,UploadSpeed=2000000,DebugLevel=none",
+    "port": "COM3",
+    "sketch": "Projects\\Watch\\tests\\Lora_Sender\\Lora_Sender.ino"
 }
