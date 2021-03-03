@@ -3,17 +3,15 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\espressif\\esp32\\**",
+                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\tools\\**",
                 "C:\\Users\\Administrator\\Documents\\Arduino\\libraries\\**",
-                "D:\\Install\\Arduino\\libraries\\**",
-                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\espressif\\esp32\\**",
-                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\tools\\**",
-                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\espressif\\esp32\\**",
-                "C:\\Users\\Administrator\\Documents\\Arduino\\hardware\\tools\\**",
-                "C:\\Users\\Administrator\\Documents\\Arduino\\libraries\\**"
+                "D:\\Install\\Arduino\\libraries\\**"
             ],
             "forcedInclude": [],
             "defines": [
-                "USBCON"
+                "USBCON",
+                "ARDUINO=10813"
             ],
             "intelliSenseMode": "windows-msvc-x64",
             "compilerPath": "D:/Install/Microsoft/Mircosoft Visual Studio/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe",

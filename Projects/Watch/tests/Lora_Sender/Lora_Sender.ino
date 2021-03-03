@@ -60,5 +60,5 @@ void loop(){
 
     Serial.println("Log: send data");
 
-    delay(5000);
+    delay(60000);
 }
